@@ -7,9 +7,9 @@
   "scripts": {
     "lint": "eslint . --ext .ts,.tsx",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "dev": "node src/stub-server.ts",
-    "build": "tsc",
-    "start": "node dist/index.js",
+    "dev": "node api.js && node src/stub-server.ts",
+    "build": "node api.js && tsc",
+    "start": "node api.js && node dist/index.js",
     "test": "jest"
   },
   "dependencies": {
